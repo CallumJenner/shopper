@@ -1,8 +1,8 @@
 class CreateProductVarients < ActiveRecord::Migration[5.1]
   def change
     create_table :product_varients do |t|
-      t.string :title
-      t.decimal :price
+      t.string :title, null: false
+      t.decimal :price, null: false, precision: 15, scale: 2
 
       t.timestamps
     end
